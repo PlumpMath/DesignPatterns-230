@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{39339BC6-2413-45A2-824A-D2FF7A6B1A21}"
+	ProjectSection(SolutionItems) = preProject
+		Presentation\Design Patterns Official.pptx = Presentation\Design Patterns Official.pptx
+		Presentation\Design Patterns.pptx = Presentation\Design Patterns.pptx
+		Presentation\Drawing1.vsdx = Presentation\Drawing1.vsdx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{11C70EB5-C574-423D-857F-82530034A21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "Code\DesignPatterns\DesignPatterns.csproj", "{A4220399-C345-40EE-B03D-9365F7972113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Tests", "Code\DesignPatterns.Tests\DesignPatterns.Tests.csproj", "{713081D2-3E26-4D66-A0F3-7D21182D315B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pics", "Pics", "{078C697A-4BE4-420C-8A31-AA9C7621323B}"
+	ProjectSection(SolutionItems) = preProject
+		Presentation\Pics\factory1.png = Presentation\Pics\factory1.png
+		Presentation\Pics\Singleton.jpg = Presentation\Pics\Singleton.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4220399-C345-40EE-B03D-9365F7972113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4220399-C345-40EE-B03D-9365F7972113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4220399-C345-40EE-B03D-9365F7972113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4220399-C345-40EE-B03D-9365F7972113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713081D2-3E26-4D66-A0F3-7D21182D315B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713081D2-3E26-4D66-A0F3-7D21182D315B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713081D2-3E26-4D66-A0F3-7D21182D315B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713081D2-3E26-4D66-A0F3-7D21182D315B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4220399-C345-40EE-B03D-9365F7972113} = {11C70EB5-C574-423D-857F-82530034A21A}
+		{713081D2-3E26-4D66-A0F3-7D21182D315B} = {11C70EB5-C574-423D-857F-82530034A21A}
+		{078C697A-4BE4-420C-8A31-AA9C7621323B} = {39339BC6-2413-45A2-824A-D2FF7A6B1A21}
+	EndGlobalSection
+EndGlobal
