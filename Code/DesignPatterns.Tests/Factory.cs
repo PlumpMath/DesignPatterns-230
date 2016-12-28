@@ -8,10 +8,19 @@ namespace DesignPatterns.Tests
     public class Factory
     {
         [TestMethod]
-        public void TestMethod1()
+        public void NotNullDefaultDistr()
         {
             var store = new BookStore();
-            Assert.IsNotNull(store.GetDistributor());
+            Assert.IsTrue(store.GetDistributor() is EastCostDitributor);
+        }
+
+        [TestMethod]
+        public void SpecificNonDefaultDistributor()
+        {
+            var store = new BookStore();
+            store.Distributor = new WestCostDitributor();
+
+            Assert.IsTrue(store.GetDistributor() is WestCostDitributor);
         }
     }
 }

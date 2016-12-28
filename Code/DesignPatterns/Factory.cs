@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
@@ -20,7 +16,17 @@ namespace DesignPatterns
             Console.WriteLine("Shipped from " + _cntrName);
         }
     }
-    
+
+    public class WestCostDitributor : IDistributor
+    {
+        private readonly string _cntrName = "West Cost Distributor";
+
+        public void ShipBook()
+        {
+            Console.WriteLine("Shipped from " + _cntrName);
+        }
+    }
+
     public class BookStore
     {
         public IDistributor Distributor { get; set; }
