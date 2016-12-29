@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Exercise
 {
-    public abstract class Person : ILibObject
+    public abstract class Person : LibObject
     {
         public string FullName { get; set; }
-        public abstract bool Register();
     }
 
     public class Customer : Person
     {
-        public override bool Register()
+        public override LibObject GetRegistrationInfo()
         {
-
+            throw new NotImplementedException();
         }
+        
     }
 }

@@ -18,7 +18,7 @@ namespace Exercise
         }
 
 
-        public bool Register(ILibObject libObject)
+        public bool Register(LibObject libObject)
         {
             return RegistrationRepository.Register(libObject);
         }

@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace Exercise
 {
-    public abstract class LibItem : ILibObject
+    public abstract class LibItem : LibObject
     {
-        public int AmountAvailable { get; }
-        public abstract bool Register();
+        public string Title { get; set; }
     }
 
     public class Book : LibItem
     {
-        public override bool Register()
+        public string Author { get; set; }
+
+        public override LibObject GetRegistrationInfo()
         {
             throw new NotImplementedException();
         }
@@ -22,7 +23,9 @@ namespace Exercise
 
     public class Video : LibItem
     {
-        public override bool Register()
+        public string Producer { get; set; }
+
+        public override LibObject GetRegistrationInfo()
         {
             throw new NotImplementedException();
         }
