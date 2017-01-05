@@ -7,18 +7,16 @@ namespace Exercise
         //implement Singleton to make sure only one library will exist
 
         /////
-        private Library _instance;
-       
+        private static Library _instance;
 
         private Library() {}
 
-        public Library GetInstance()
+        public static Library GetInstance()
         {
             return _instance ?? (_instance = new Library());
         }
-
-
-        public bool Register(LibObject libObject)
+        
+        public bool Register(IRegistarable libObject)
         {
             return RegistrationRepository.Register(libObject);
         }

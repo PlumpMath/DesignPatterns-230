@@ -1,33 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercise
+﻿namespace Exercise
 {
-    public abstract class LibItem : LibObject
+    public abstract class Item : LibObject, IRegistarable
     {
-        public string Title { get; set; }
+        public Item(int amount, int year)
+        {
+            AvailableAmount = amount;
+            ObjType = ObjectType.Item;
+            YearCreated = year;
+        }
+
+        public abstract RegisteredObject GetRegistrationInfo();
     }
 
-    public class Book : LibItem
+    public class Book : Item
     {
+        public Book(string author, string title, int year, int amount) : base(amount, year)
+        {
+            NameOrTitle = title;
+            Author = author;
+        }
         public string Author { get; set; }
 
-        public override LibObject GetRegistrationInfo()
+        public override RegisteredObject GetRegistrationInfo()
         {
-            throw new NotImplementedException();
+            return new RegisteredObject
+            {
+                Info = "Book Name: " + NameOrTitle + " , Author: " + Author + " Year: " + YearCreated,
+                AvailableAmount = AvailableAmount
+            };
         }
     }
 
-    public class Video : LibItem
+    public class Video : Item
     {
+        public Video(string producer, string title, int year, int amount) : base(amount, year)
+        {
+            NameOrTitle = title;
+            Producer = producer;
+        }
+
         public string Producer { get; set; }
 
-        public override LibObject GetRegistrationInfo()
+        public override RegisteredObject GetRegistrationInfo()
         {
-            throw new NotImplementedException();
+            return new RegisteredObject
+            {
+                Info = "Title: " + NameOrTitle + ", By: " + Producer + " Year: " + YearCreated,
+                AvailableAmount = AvailableAmount
+            };
         }
+
     }
 }

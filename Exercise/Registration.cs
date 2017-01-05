@@ -6,31 +6,36 @@ using System.Threading.Tasks;
 
 namespace Exercise
 {
+    public interface IRegistarable
+    {
+        RegisteredObject GetRegistrationInfo();
+    }
+
     public static class RegistrationRepository
     {
-        public static List<LibObject> RegisteredList { get; } = null;
+        public static List<RegisteredObject> RegisteredList { get; } = null;
 
         //implement Register method so it will accept both a Person and an Item
-        public static bool Register(LibObject libObject)
+        public static bool Register(IRegistarable libObject)
         {
             var info = libObject.GetRegistrationInfo();
-            if (info != null)
-            {
-                RegisteredList.Add(info);
-                return true;
-            }
+            if (info == null) return false;
 
-            return false;
+            info.Id = GetNextAvailableId();
+            RegisteredList.Add(info);
+            return true;
         }
 
-
+        private static int GetNextAvailableId()
+        {
+            return RegisteredList.Count + 1;
+        }
     }
-    
-    public class RegisteredItem
-    {
-        public string TitleName { get; set; }
-        public string AuthorProducer { get; set; }
-        public int AvailableAmount { get; set; }
 
+    public class RegisteredObject
+    {
+        public string Info { get; set; }
+        public int Id { get; set; }
+        public int AvailableAmount { get; set; }
     }
 }

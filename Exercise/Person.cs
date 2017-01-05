@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercise
+﻿namespace Exercise
 {
-    public abstract class Person : LibObject
+    public class Customer : LibObject, IRegistarable
     {
-        public string FullName { get; set; }
-    }
+        public string Address { get; set; }
 
-    public class Customer : Person
-    {
-        public override LibObject GetRegistrationInfo()
+        public Customer(string name, string addr)
         {
-            throw new NotImplementedException();
+            NameOrTitle = name;
+            Address = addr;
+            ObjType = ObjectType.Person;
         }
-        
+
+
+        public RegisteredObject GetRegistrationInfo()
+        {
+            return new RegisteredObject
+            {
+                Info = "Name: " + NameOrTitle + ", Address: " + Address
+            };
+        }
+
+        public void SetId(int id)
+        {
+            ObjectId = id;
+        }
     }
 }
