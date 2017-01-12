@@ -7,18 +7,37 @@ namespace Execise.Tests
     [TestClass]
     public class UnitTests
     {
+        //test the two calls to library instance return same instance
         [TestMethod]
-        public void ShouldBeSingleton()
+        public void LibraryShouldBeSingleton()
         {
             //check that when you create a Library instance second time, 
             //you get exactly the same instance as for a very first time
+            Assert.IsTrue(ReferenceEquals(Library.GetInstance(), Library.GetInstance()));
         }
 
+        //test that an item was registered
         [TestMethod]
         public void ShouldRegister()
         {
-            var lib = Library.GetInstance();
-            Assert.IsTrue(lib.Register(new Video(" Walt Disney Pictures", "The Jungle Book", 2016, 10)));
+            //check that an item was registered successfully
+            Assert.IsTrue(Library.GetInstance().Register(new Video(" Walt Disney Pictures", "The Jungle Book", 2016, 10)) != -1);
+
+            Assert.IsTrue(Library.GetInstance().Register(new Book(" J. K. Rowling", "Harry Potter", 2016, 10)) != -1);
+        }
+
+       
+        // NOT FOR EXERCISE
+        
+        //test the very first id is always 1
+        [TestMethod]
+        public void FirstIdIsAlwaysOne()
+        {
+            RegistrationRepository.DeleteAllRegisteredItems();
+
+            var id = Library.GetInstance().Register(new Video(" Walt Disney Pictures", "The Jungle Book", 2016, 10));
+
+            Assert.IsTrue(id == 1);
         }
     }
 }

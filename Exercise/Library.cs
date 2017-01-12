@@ -16,10 +16,14 @@ namespace Exercise
             return _instance ?? (_instance = new Library());
         }
         
-        public bool Register(IRegistarable libObject)
+        public int Register(IRegistarable registarable)
         {
-            return RegistrationRepository.Register(libObject);
+            return RegistrationRepository.Register(registarable);
         }
 
+        public string GetItemById(int id)
+        {
+            return RegistrationRepository.GetbyId(id);
+        }
     }
 }
