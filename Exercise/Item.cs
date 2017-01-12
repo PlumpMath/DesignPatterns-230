@@ -30,25 +30,4 @@
             };
         }
     }
-
-    public class Video : Item
-    {
-        public Video(string producer, string title, int year, int amount) : base(amount, year)
-        {
-            NameOrTitle = title;
-            Producer = producer;
-        }
-
-        public string Producer { get; set; }
-
-        public override RegisteredObject GetRegistrationInfo()
-        {
-            return new RegisteredObject
-            {
-                Info = "Title: " + NameOrTitle + ", By: " + Producer + " Year: " + YearCreated,
-                AvailableAmount = AvailableAmount
-            };
-        }
-
-    }
 }

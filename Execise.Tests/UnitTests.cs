@@ -21,7 +21,7 @@ namespace Execise.Tests
         public void ShouldRegister()
         {
             //check that an item was registered successfully
-            Assert.IsTrue(Library.GetInstance().Register(new Video(" Walt Disney Pictures", "The Jungle Book", 2016, 10)) != -1);
+            Assert.IsTrue(Library.GetInstance().Register(new Customer("Alex B", "386 Broadway")) != -1);
 
             Assert.IsTrue(Library.GetInstance().Register(new Book(" J. K. Rowling", "Harry Potter", 2016, 10)) != -1);
         }
@@ -35,7 +35,7 @@ namespace Execise.Tests
         {
             RegistrationRepository.DeleteAllRegisteredItems();
 
-            var id = Library.GetInstance().Register(new Video(" Walt Disney Pictures", "The Jungle Book", 2016, 10));
+            var id = Library.GetInstance().Register(new Book(" J. K. Rowling", "Harry Potter", 2016, 10));
 
             Assert.IsTrue(id == 1);
         }

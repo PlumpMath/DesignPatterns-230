@@ -36,13 +36,6 @@ namespace Exercise
             return info.Id;
         }
 
-       public static string GetbyId(int id)
-        {
-            var item = _registeredList.FirstOrDefault(i => i.Id == id);
-
-            return item?.ToString();
-        }
-
         public static int DeleteAllRegisteredItems()
         {
             var size = _registeredList.Count();
@@ -52,7 +45,7 @@ namespace Exercise
             return size;
         }
     }
-    
+
     public class RegisteredObject
     {
         public string Info { get; set; }
