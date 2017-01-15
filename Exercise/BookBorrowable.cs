@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Exercise
+﻿namespace Exercise
 {
-    
-    public class BookToLet : Item
+    public class BookBorrowable : Book
     {
         private readonly Book _book;
-
-        public string Author { get {return  _book.Author; } set { _book.Author = value; } }
 
         public bool BorrowOne()
         {
@@ -21,7 +12,9 @@ namespace Exercise
             return true;
         }
 
-        public BookToLet(Book b) : base(b.AvailableAmount, b.YearCreated)
+        new public int AvailableAmount { get { return _book.AvailableAmount; } set { _book.AvailableAmount = value; } }
+
+        public BookBorrowable(Book b) : base(b.Author, b.NameOrTitle, b.YearCreated, b.AvailableAmount)
         {
             _book = b;
         }

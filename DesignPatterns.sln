@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 		Presentation\Design Patterns Official.pptx = Presentation\Design Patterns Official.pptx
 		Presentation\Design Patterns.pptx = Presentation\Design Patterns.pptx
 		Presentation\Drawing1.vsdx = Presentation\Drawing1.vsdx
+		Presentation\GitHubQuickStart.docx = Presentation\GitHubQuickStart.docx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code", "Code", "{11C70EB5-C574-423D-857F-82530034A21A}"
@@ -25,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{EA98A53A-F8CD-4539-9E57-1FEF2D64F13A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Execise.Tests", "Execise.Tests\Execise.Tests.csproj", "{464FBD03-CA8B-4926-8F69-66726819DA02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resolved", "Resolved", "{ACDC1096-5705-46D3-A034-C3469C1DE3BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,5 +61,6 @@ Global
 		{078C697A-4BE4-420C-8A31-AA9C7621323B} = {39339BC6-2413-45A2-824A-D2FF7A6B1A21}
 		{EA98A53A-F8CD-4539-9E57-1FEF2D64F13A} = {11C70EB5-C574-423D-857F-82530034A21A}
 		{464FBD03-CA8B-4926-8F69-66726819DA02} = {11C70EB5-C574-423D-857F-82530034A21A}
+		{ACDC1096-5705-46D3-A034-C3469C1DE3BE} = {11C70EB5-C574-423D-857F-82530034A21A}
 	EndGlobalSection
 EndGlobal

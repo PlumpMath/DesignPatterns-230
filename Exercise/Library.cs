@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercise
+﻿namespace Exercise
 {
     public class Library
     {
@@ -8,10 +6,6 @@ namespace Exercise
 
         /////
         private static Library _instance;
-
-        private Library()
-        {
-        }
 
         public static Library GetInstance()
         {

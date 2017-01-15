@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookToLet.cs" />
+    <Compile Include="BookBorrowable.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="LibObject.cs" />
     <Compile Include="Library.cs" />
