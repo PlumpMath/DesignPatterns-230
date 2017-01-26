@@ -5,8 +5,7 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{39339BC6-2413-45A2-824A-D2FF7A6B1A21}"
 	ProjectSection(SolutionItems) = preProject
-		Presentation\Design Patterns Official.pptx = Presentation\Design Patterns Official.pptx
-		Presentation\Design Patterns.pptx = Presentation\Design Patterns.pptx
+		Presentation\Design Patterns Presentation.pptx = Presentation\Design Patterns Presentation.pptx
 		Presentation\Drawing1.vsdx = Presentation\Drawing1.vsdx
 		Presentation\GitHubQuickStart.docx = Presentation\GitHubQuickStart.docx
 	EndProjectSection
@@ -59,8 +58,8 @@ Global
 		{A4220399-C345-40EE-B03D-9365F7972113} = {11C70EB5-C574-423D-857F-82530034A21A}
 		{713081D2-3E26-4D66-A0F3-7D21182D315B} = {11C70EB5-C574-423D-857F-82530034A21A}
 		{078C697A-4BE4-420C-8A31-AA9C7621323B} = {39339BC6-2413-45A2-824A-D2FF7A6B1A21}
-		{EA98A53A-F8CD-4539-9E57-1FEF2D64F13A} = {11C70EB5-C574-423D-857F-82530034A21A}
-		{464FBD03-CA8B-4926-8F69-66726819DA02} = {11C70EB5-C574-423D-857F-82530034A21A}
+		{EA98A53A-F8CD-4539-9E57-1FEF2D64F13A} = {ACDC1096-5705-46D3-A034-C3469C1DE3BE}
+		{464FBD03-CA8B-4926-8F69-66726819DA02} = {ACDC1096-5705-46D3-A034-C3469C1DE3BE}
 		{ACDC1096-5705-46D3-A034-C3469C1DE3BE} = {11C70EB5-C574-423D-857F-82530034A21A}
 	EndGlobalSection
 EndGlobal
